@@ -6,8 +6,14 @@
 #include <errno.h>
 #include <string.h>
 #include <strings.h>
+#include <sys/stat.h>
+#include <assert.h>
+#include <sys/sendfile.h>
+#include <unistd.h>
+#include <dirent.h>
+#include <stdlib.h>
 
-int initListenFd(unsigned short port) {
+int initListenFd(int port) {
 
     // 1.创建监听id
     int lfd = socket(AF_INET, SOCK_STREAM, 0);
