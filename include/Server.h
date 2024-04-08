@@ -18,3 +18,6 @@ int sendHeadMsg(int cfd, int status, const char* desr, const char* type, int len
 const char* getFileType(const char* name);
 // 发送文件夹
 int sendDir(const char* dirName, int cfd);
+int hexToDec(char c);
+// 转换成中文
+void decodeMsg(char* to, char* from);
